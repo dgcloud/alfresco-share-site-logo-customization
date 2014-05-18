@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>Change Site Logo</shortname>
+  <description>Change Site Logo Tool</description>
+  <url>/components/site/site-logo</url>
+</webscript>

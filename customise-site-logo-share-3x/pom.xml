@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>com.leftxmas.alfresco</groupId>
+		<artifactId>customise-site-logo</artifactId>
+		<version>2.0-SNAPSHOT</version>
+	</parent>
+	
+	<artifactId>customise-site-logo-share-3x</artifactId>
+	<packaging>jar</packaging>
+	
+	<build>
+		<plugins>
+			<!-- Needed for cross OS compatibility in acp/zip encoding -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<!-- By default as per http://code.google.com/p/maven-alfresco-archetypes/issues/detail?id=7 
+						FTL are not filtered to avoid corruption. | This behavior can be relaxed 
+						(in case filtering is needed in the FTLs) by selecting which files are filtered 
+						and which not as described | here http://code.google.com/p/maven-alfresco-archetypes/issues/detail?id=7#c3 -->
+					<nonFilteredFileExtensions>
+						<nonFilteredFileExtension>ftl</nonFilteredFileExtension>
+					</nonFilteredFileExtensions>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>net.alchim31.maven</groupId>
+				<artifactId>yuicompressor-maven-plugin</artifactId>
+				<version>1.2</version>
+				<configuration>
+					<excludes>
+						<exclude>alfresco/**/*.*</exclude>
+						<exclude>**/*-min.js</exclude>
+						<exclude>**/*.css</exclude>
+					</excludes>
+					<resources />
+				</configuration>
+				<executions>
+					<execution>
+						<id>compress-js</id>
+						<goals>
+							<goal>compress</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

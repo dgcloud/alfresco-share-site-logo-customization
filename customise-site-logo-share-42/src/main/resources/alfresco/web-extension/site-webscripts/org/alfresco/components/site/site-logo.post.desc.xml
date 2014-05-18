@@ -1,0 +1,6 @@
+<webscript>
+    <shortname>Change Site Logo POST</shortname>
+    <description>Change Site Logo POST form submission processing</description>
+    <format default="json" />
+    <url>/components/site-logo</url>
+</webscript>
