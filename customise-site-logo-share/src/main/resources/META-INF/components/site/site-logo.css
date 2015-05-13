@@ -1,0 +1,12 @@
+.alfresco-logo-Logo .alfresco-logo-large {
+    max-height: 100%;
+    width:auto;
+}
+
+.alfresco-logo-Logo .alfresco-logo-only {
+    max-height: 100%;
+    width:auto;
+}
+.alfresco-logo-Logo .alfresco-logo-only > img {
+    max-height: 100%;
+}

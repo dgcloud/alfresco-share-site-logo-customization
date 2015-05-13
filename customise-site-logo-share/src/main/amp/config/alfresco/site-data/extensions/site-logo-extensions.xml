@@ -9,6 +9,12 @@
 					<targetPackageRoot>org.alfresco.share.header</targetPackageRoot>
 					<sourcePackageRoot>site-logo.share-header</sourcePackageRoot>
 				</customization>
+				<customization>
+					<targetPackageRoot>org.alfresco</targetPackageRoot>
+					<dependencies>
+						<css>/res/components/site/site-logo.css</css>
+					</dependencies>
+				</customization>
 			</customizations>
 		</module>
 	</modules>
