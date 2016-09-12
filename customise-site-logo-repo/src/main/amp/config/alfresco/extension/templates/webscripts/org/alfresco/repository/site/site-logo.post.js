@@ -47,6 +47,8 @@ function main()
       logoNode.properties.content.write(content);
       logoNode.properties.content.guessMimetype(filename);
       logoNode.save();
+
+      logoNode.addAspect("sys:hidden");
       
       logger.log("logo changed")
       
