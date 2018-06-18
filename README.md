@@ -1,6 +1,6 @@
-#Site Logo Customization for Alfresco Share
+# Site Logo Customization for Alfresco Share
 
-##Introduction
+## Introduction
 
 This addon will allow you to set a different logo for each Alfresco Site. (Site Specific Logo)
 
@@ -9,38 +9,43 @@ It's based on the project hosted in [https://code.google.com/p/alfresco-share-si
 The primary differences from the original project are:  
 
 - Project is now based on Alfresco SDK.  
-- Compatible with Alfresco Community 4.2.f, Alfresco Community 5.0d, [LXCommunity LX80](https://loftux.se/en/products-and-add-ons/alfresco/alfresco-versions?ref=site-logo).
+- Compatible with:
+   - Alfresco Community 4.2.f
+   - Alfresco Community 5.0.d
+   - [LXCommunity LX80](https://loftux.se/en/products-and-add-ons/alfresco/alfresco-versions?ref=site-logo)
+   - Alfresco Community 5.2.g (201707GA)
 
-##Building the Project
+## Building the Project
 - Run `mvn package` from the project root.
 - Deploy the AMP files generated in each target folder or use as dependencies in your Alfresco Maven SDK based projects.
 
+## Updates
 
-##Updates
+**2018 Jun 17**
+- Added ES i18n localization support
 
 **2015 May 13**  
 - Added support for Maven SDK 2.0.1-SNAPSHOT  
 - Fixed site logo width being set to 48px issue
 
+## Authors
 
-##Authors
-
-###Original Author
+### Original Author
 - Alex Yu-Kuang Lu, ixxus  ([https://github.com/alu-ixxus](https://github.com/alu-ixxus), [http://www.ixxus.com](http://www.ixxus.com))
 
-###Contributors
+### Contributors
 - Douglas C. R. Paes ([http://douglascrp.blogspot.se/](http://douglascrp.blogspot.se/))
+- Cesar Capillas, Zylk, ([https://www.linkedin.com/in/cesarcapillas/](https://www.linkedin.com/in/cesarcapillas/))
 - Bhagya Silva, Loftux AB ([http://about.me/bhagyas](http://about.me/bhagyas), [http://www.loftux.se/en](http://www.loftux.se/en?ref=site-logo)) 
 
-##License
+## License
 - Apache License 2.0
 
-
-##Support or Contact
+## Support or Contact
 
 If you discover any issues, please report them over at GitHub - or simply fork the project, fix it and then do a pull request.
 
 Commercial support available from sponsors.
 
-##Contributions
+## Contributions
 Feel free to make suggestions on the issue tracker and pull requests for any improvements you make to the code.
