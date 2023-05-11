@@ -528,9 +528,28 @@
          
          var site = oRecord.getData(),
             img = site.isInfo ? "help-site-bw-32.png" : "filetypes/generic-site-32.png";
-
-         elCell.innerHTML = '<img src="' + Alfresco.constants.URL_RESCONTEXT + 'components/images/' + img + '" />';
+            
+         this.getSiteLogoUrl(site.shortName, elCell, img);
       },
+      
+      getSiteLogoUrl: function getSiteLogoUrl(siteId, cell, img) {
+         Alfresco.util.Ajax.jsonGet({
+			  url: Alfresco.constants.PROXY_URI + "api/site-logo?site=" + siteId,
+			  successCallback : {
+				  fn : function(response) {
+				    var responseJson = response.json;
+				  	
+				  	if (response.json.logo !== "") {
+				  		cell.innerHTML = '<img src="' + Alfresco.constants.URL_CONTEXT + 'proxy/alfresco/api/node/'
+						+ responseJson.logo.replace("://", "/") + '/content"/>';
+					} else {
+						cell.innerHTML = '<img src="' + Alfresco.constants.URL_RESCONTEXT + 'components/images/' + img + '" />';
+					}
+				  },
+				  scope : this
+			  }
+			});
+	  },
 
       /**
        * Name & description custom datacell formatter

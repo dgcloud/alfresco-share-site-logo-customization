@@ -17,5 +17,17 @@
 				</customization>
 			</customizations>
 		</module>
+
+		<module>
+			<id>Custom my-sites dashet with custom logo</id>
+			<version>1.0</version>
+			<auto-deploy>true</auto-deploy>
+			<customizations>
+				<customization>
+					<targetPackageRoot>org.alfresco.components.dashlets</targetPackageRoot>
+					<sourcePackageRoot>site-logo.dashlets</sourcePackageRoot>
+				</customization>
+			</customizations>
+		</module>
 	</modules>
 </extension>
