@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Get site's logo</shortname>
+  <description>Get the site's logo.</description>
+  <url>/api/site-logo?site={site}</url>
+  <format default="json">argument</format>
+  <authentication>user</authentication>
+  <transaction allow="readonly">required</transaction>
+</webscript>
