@@ -4,7 +4,7 @@ function main()
     var site = args["site"];
     var siteObj = siteService.getSite(site);
      if (siteObj == null) {
-          logger.log("Site não encontrado: " + site)
+          logger.log("Site not found: " + site)
         }else{
 	var siteNode = siteObj.node;
 
